@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FontController">
+   <children>
+      <HBox spacing="10.0">
+         <children>
+            <Label text="Font:" />
+            <Region prefHeight="25.0" prefWidth="324.0" />
+            <Label text="Size:" />
+            <ChoiceBox fx:id="sizeChoiceBox" prefHeight="25.0" prefWidth="56.0" />
+         </children>
+      </HBox>
+      <ScrollPane prefHeight="515.0" prefWidth="460.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="458.0">
+               <children>
+                  <ListView fx:id="fontList" prefHeight="513.0" prefWidth="460.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <BorderPane prefHeight="96.0" prefWidth="460.0">
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER_RIGHT">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onConfirmButtonPressed" text="Anwenden" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <Label fx:id="sampleLabel" alignment="BOTTOM_LEFT" prefHeight="55.0" prefWidth="460.0" text="Falsches Üben von Xylophonmusik quält jeden größeren Zwerg" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
